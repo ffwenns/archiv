@@ -1,0 +1,25 @@
+{{- define "title" -}}
+  {{- if findRE "20[0-9][0-9]" .RelPermalink -}}
+    {{- $year := index (findRE "20[0-9][0-9]" .RelPermalink) 0 -}}
+---
+title: Jahresarchiv {{ $year }}
+author: Freiwillige Feuerwehr Wenns
+titlepage: true
+titlepage-color: B10000
+titlepage-text-color: FFFFFF
+titlepage-rule-color: 990000
+titlepage-logo: logo.pdf
+urlcolor: blue
+linkcolor: blue
+lang: de
+---
+  {{- end -}}
+{{- end -}}
+
+{{- define "main" -}}
+  {{- if findRE "20[0-9][0-9]" .RelPermalink -}}
+    {{- $year := index (findRE "20[0-9][0-9]" .RelPermalink) 0 -}}
+	{{- partial "posts" (dict "year" (int $year)) -}}
+  {{- end -}}
+{{- end -}}
+

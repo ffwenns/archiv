@@ -1,0 +1,25 @@
+baseURL = 'https://ffwenns.at/'
+languageCode = 'de-AT'
+title = 'Freiwillige Feuerwehr Wenns'
+disableKinds = ['home', 'taxonomy', 'term', 'sitemap']
+
+[module]
+  [[module.mounts]]
+    source = "../ffwenns/archive"
+    target = "content"
+	excludeFiles = ["**/*.webp"]
+  [[module.mounts]]
+    source = "../ffwenns/posts"
+    target = "content"
+	excludeFiles = ["**/*.webp"]
+
+[outputs]
+  section = ["HTML"]
+
+[mediaTypes]
+[mediaTypes."text/html"]
+suffix = "md"
+
+[outputFormats.HTML]
+mediaType = "text/markdown"
+

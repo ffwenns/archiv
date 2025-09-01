@@ -1,0 +1,25 @@
+{{- $year := .year -}}
+{{- $yearPages := where site.RegularPages "Section" "ne" "" -}}
+{{- $yearPages = where $yearPages "Date.Year" $year -}}
+{{ range $yearPages.ByDate }}
+# {{ trim .Title " " }}
+{{ .Date.Format "02.01.2006" }}
+{{ .Content }}
+
+{{ with .Params.facebook_url }}
+[{{ . }}]({{ . }})
+
+---
+
+![](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ . | urlquery }})
+{{ else }}
+{{ $githubUrl := printf "https://github.com/ffwenns/homepage/tree/main/archive%s" (strings.TrimSuffix "/" (strings.TrimSuffix "index.md" .RelPermalink)) }}
+[{{ $githubUrl }}]({{ $githubUrl }})
+
+---
+
+![](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ $githubUrl | urlquery }})
+{{ end }}
+
+\newpage
+{{ end }}
