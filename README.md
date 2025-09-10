@@ -1,4 +1,4 @@
-# archive
+# archiv
 
 Alle Beiträge nach Jahr archiviert:
 
