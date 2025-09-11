@@ -2,6 +2,7 @@
 
 Alle Beiträge nach Jahr archiviert:
 
+- [Jahresarchiv 2025](/files/ffwenns_jahresarchiv_2025.pdf)
 - [Jahresarchiv 2024](/files/ffwenns_jahresarchiv_2024.pdf)
 - [Jahresarchiv 2023](/files/ffwenns_jahresarchiv_2023.pdf)
 - [Jahresarchiv 2022](/files/ffwenns_jahresarchiv_2022.pdf)

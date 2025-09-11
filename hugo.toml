@@ -5,11 +5,7 @@ disableKinds = ['home', 'taxonomy', 'term', 'sitemap']
 
 [module]
   [[module.mounts]]
-    source = "../ffwenns/archive"
-    target = "content"
-	excludeFiles = ["**/*.webp"]
-  [[module.mounts]]
-    source = "../ffwenns/posts"
+    source = "../homepage/content/posts"
     target = "content"
 	excludeFiles = ["**/*.webp"]
 
